@@ -1,29 +1,30 @@
 version: '3.8'
+
 services:
   movies:
     image: alexlaxu/paytmmoviesrepo:latest
     ports:
-      - '81:80'
+      - '8081:80'
     deploy:
       replicas: 3
 
   train:
     image: alexlaxu/paytmtrainrepo:latest
     ports:
-      - "81:80"
+      - '8082:80'
     deploy:
       replicas: 3
 
   dth:
     image: alexlaxu/paytmdthrepo:latest
     ports:
-      - "81:80"
+      - '8083:80'
     deploy:
       replicas: 3
 
   recharge:
     image: alexlaxu/paytmrechargerepo:latest
     ports:
-      - "81:80"
+      - '8084:80'
     deploy:
       replicas: 3
